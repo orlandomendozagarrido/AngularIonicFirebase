@@ -32,26 +32,26 @@ export class IdeaDetailsPage implements OnInit {
   addIdea() {
     this.ideaService.addIdea(this.idea).then(() => {
       this.router.navigateByUrl('/');
-      this.showToast('Idea added');
+      this.showToast('Routina Agregada!');
     }, err => {
-      this.showToast('There was a problem adding your idea :(');
+      this.showToast('Error en agregar Routina! :(');
     });
   }
 
   deleteIdea() {
     this.ideaService.deleteIdea(this.idea.id).then(() => {
       this.router.navigateByUrl('/');
-      this.showToast('Idea deleted');
+      this.showToast('Routina Eliminada');
     }, err => {
-      this.showToast('There was a problem deleting your idea :(');
+      this.showToast('Error en Eliminar Routina :(');
     });
   }
 
   updateIdea() {
     this.ideaService.updateIdea(this.idea).then(() => {
-      this.showToast('Idea updated');
+      this.showToast('Routina Actualizada');
     }, err => {
-      this.showToast('There was a problem updating your idea :(');
+      this.showToast('Error en Actualizar Routina:(');
     });
   }
 
